@@ -4,7 +4,8 @@ import {View,
         FlatList,
         Text,
         StyleSheet,
-        TouchableOpacity 
+        TouchableOpacity,
+        Platform
     } from 'react-native';
 
 import { CATEGORIES } from '../data/dummy-data';
@@ -16,7 +17,9 @@ const CategoriesScreen = props => {
         return (
             <TouchableOpacity style={styles.gridItem}
             onPress={() => {
-            props.navigation.navigate('CategoryCourse');}}>
+            props.navigation.navigate('CategoryCourse', { 
+                categoryId: itemData.item.id
+                });}}>
                 <View >
                     <Text>{itemData.item.title}</Text>
                 </View>
@@ -33,12 +36,7 @@ const CategoriesScreen = props => {
 };
 
 CategoriesScreen.navigationOptions = {
-    headerTitle: 'Tipos de Cursos',
-    headerTitleAlign: 'center',
-    headerStyle:{
-        backgroundColor: Colors.primaryColor,
-    },
-    headerLayoutPreset: 'center'
+    headerTitle: 'Tipos de Cursos',    
 };
 
 const styles = StyleSheet.create({
