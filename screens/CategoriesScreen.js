@@ -8,35 +8,34 @@ import {View,
         Platform
     } from 'react-native';
 
-import { CATEGORIES } from '../data/dummy-data';
-import Colors from '../constants/Colors'; 
+import { CATEGORIES } from '../data/model-data';
+import CategotyGridTile from '../components/CategoryGridTile';
 
 
 const CategoriesScreen = props => {
     const renderGridItem = (itemData) => {
         return (
-            <TouchableOpacity style={styles.gridItem}
-            onPress={() => {
+           <CategotyGridTile 
+           title={itemData.item.title}
+           color={itemData.item.color} 
+           onSelect={() => {
             props.navigation.navigate('CategoryCourse', { 
                 categoryId: itemData.item.id
-                });}}>
-                <View >
-                    <Text>{itemData.item.title}</Text>
-                </View>
-            </TouchableOpacity>
-     );
+                });}}/>
+        );
     };
 
     return (
             <FlatList data={CATEGORIES} 
             keyExtractor={(item,index) => item.id}
             renderItem={renderGridItem} 
-            numColumns={2}/>
+            numColumns={2}
+            />
     );
 };
 
 CategoriesScreen.navigationOptions = {
-    headerTitle: 'Tipos de Cursos',    
+    headerTitle: 'Tipos de Cursos', 
 };
 
 const styles = StyleSheet.create({
@@ -45,11 +44,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems : 'center',
     },
-    gridItem:{
-        flex:1,
-        margin:15,
-        height:150,
-    }
 });
 
 
