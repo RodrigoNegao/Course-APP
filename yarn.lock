@@ -4374,7 +4374,7 @@ react-native-safe-area-context@0.7.3:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-0.7.3.tgz#ad6bd4abbabe195332c53810e4ce5851eb21aa2a"
   integrity sha512-9Uqu1vlXPi+2cKW/CW6OnHxA76mWC4kF3wvlqzq4DY8hn37AeiXtLFs2WkxH4yXQRrnJdP6ivc65Lz+MqwRZAA==
 
-react-native-safe-area-view@^0.14.8:
+react-native-safe-area-view@^0.14.8, react-native-safe-area-view@^0.14.9:
   version "0.14.9"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.14.9.tgz#90ee8383037010d9a5055a97cf97e4c1da1f0c3d"
   integrity sha512-WII/ulhpVyL/qbYb7vydq7dJAfZRBcEhg4/UWt6F6nAKpLa3gAceMOxBxI914ppwSP/TdUsandFy6lkJQE0z4A==
@@ -4469,6 +4469,11 @@ react-navigation-header-buttons@^4.0.2:
     invariant ">=2"
     react-native-platform-touchable "^1.1.1"
 
+react-navigation-material-bottom-tabs@^2.2.12:
+  version "2.2.12"
+  resolved "https://registry.yarnpkg.com/react-navigation-material-bottom-tabs/-/react-navigation-material-bottom-tabs-2.2.12.tgz#273c8c1e4411de7f371fe520ab3550493fdffd20"
+  integrity sha512-bRPz6GzB6i0iLy2Z04xmV8vG40Gr8qNYQn3v9dE473PGM58Xxd6E/jftySX3ZFaJZUOYBwwddMJ+eOsRoaMcNg==
+
 react-navigation-stack@^2.3.12:
   version "2.3.12"
   resolved "https://registry.yarnpkg.com/react-navigation-stack/-/react-navigation-stack-2.3.12.tgz#627d44977e975c527899b32d67e448a7d6dcd45b"
@@ -4477,14 +4482,14 @@ react-navigation-stack@^2.3.12:
     color "^3.1.2"
     react-native-iphone-x-helper "^1.2.1"
 
-react-navigation-tabs@^2.8.11:
-  version "2.8.11"
-  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-2.8.11.tgz#473faa7dfb8ab324b558b35064b728087ac3a52a"
-  integrity sha512-jVZlf5TMegcxV3cciAlF8kdvsLcnOwIICtfaNP7ieqqRBSHEIl3KMsqEpasOSmHVtJSQIINTQIwKC8Uj+ZW3uQ==
+react-navigation-tabs@^2.8.13:
+  version "2.8.13"
+  resolved "https://registry.yarnpkg.com/react-navigation-tabs/-/react-navigation-tabs-2.8.13.tgz#a7ec2a6b298e522370f03172bf2778f422ad4d6f"
+  integrity sha512-3CpGzHd/mWAv/vOvP/mYxLMKAOVOxu9uYj6i4DZB2KkGphbwrZTGckaxkGj1L9SyxNSBnB4nAz2a1I4Bdk8vTg==
   dependencies:
     hoist-non-react-statics "^3.3.2"
     react-lifecycles-compat "^3.0.4"
-    react-native-safe-area-view "^0.14.8"
+    react-native-safe-area-view "^0.14.9"
     react-native-tab-view "^2.11.0"
 
 react-navigation@^4.3.7:

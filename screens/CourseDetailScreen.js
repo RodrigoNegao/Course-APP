@@ -24,11 +24,12 @@ CourseDetailScreen.navigationOptions = (navigationData) => {
     const selectedCourse = COURSES.find(course => course.id === courseId);
     return{
         headerTitle: selectedCourse.title,
-        headerRight: () => (<HeaderButtons HeaderButtonComponent={HeaderButton}> 
+        headerRight: () => (<HeaderButtons 
+            HeaderButtonComponent={HeaderButton}> 
                 <Item title='Favorite' 
                     iconName='ios-star'
                     onPress={() => {
-                    console.log ('MArk as favorite!');}
+                    console.log ('Mark as favorite!');}
                     }
                 />
              </HeaderButtons>

@@ -1,6 +1,9 @@
+import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
 import { createAppContainer} from 'react-navigation';
+import { createBottomTabNavigator } from 'react-navigation-tabs';
+import { Ionicons, AntDesign } from '@expo/vector-icons';
 // import 'react-native-gesture-handler';
 
 
@@ -17,7 +20,6 @@ const CourseNavigator = createStackNavigator({
         screen: CategoriesCoursesScreen,
     },
     CourseDetail: CourseDetailScreen,
-    Favorites: FavoritesScreen,
     Filters: FiltersScreen,
 },{
     mode: 'modal',
@@ -30,4 +32,31 @@ const CourseNavigator = createStackNavigator({
     }
 });
 
-export default createAppContainer(CourseNavigator);
+const CourseFavTabNavigation = createBottomTabNavigator({
+    Course: {screen: CourseNavigator, 
+        navigationOptions:{
+        tabBarLabel:'Cursos',
+        tabBarIcon: tabInfo => {
+            return <AntDesign name='codesquareo'
+             size={26} color={tabInfo.tintColor} />
+            }
+        }
+    },
+    Favorites: {screen: FavoritesScreen, 
+        navigationOptions:{
+        tabBarLabel:'Favoritos!',
+        tabBarIcon: tabInfo => {
+            return (<Ionicons name='ios-star'
+             size={26} color={tabInfo.tintColor} />
+            );
+            }
+        } 
+    }
+}, {
+        tabBarOptions:{
+        activeTintColor: Colors.accentColor
+        }
+    }
+);
+
+export default createAppContainer(CourseFavTabNavigation);
