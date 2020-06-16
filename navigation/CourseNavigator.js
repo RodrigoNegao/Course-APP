@@ -1,6 +1,7 @@
 import React from 'react';
 import { Platform } from 'react-native';
 import { createStackNavigator } from 'react-navigation-stack';
+import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createAppContainer} from 'react-navigation';
 import { createBottomTabNavigator } from 'react-navigation-tabs';
 import { Ionicons, AntDesign } from '@expo/vector-icons';
@@ -30,7 +31,6 @@ const CourseNavigator = createStackNavigator({
         screen: CategoriesCoursesScreen,
     },
     CourseDetail: CourseDetailScreen,
-    Filters: FiltersScreen,
 },{
     mode: 'modal',
     defaultNavigationOptions: defaultStackNavOptions
@@ -69,7 +69,7 @@ const tabScreenConfig = {
     }
 };
 
-const CourseFavTabNavigation = 
+const CourseFavTabNavigator = 
     Platform.OS === 'android'
     ? createMaterialBottomTabNavigator(
         tabScreenConfig, {
@@ -88,4 +88,13 @@ const CourseFavTabNavigation =
     }
 );
 
-export default createAppContainer(CourseFavTabNavigation);
+const FilterNavigator = createStackNavigator({
+    Filters: FiltersScreen,
+});
+
+const MainNavigator = createDrawerNavigator({
+    CoursesFavs: CourseFavTabNavigator,
+    Filters: FilterNavigator
+});
+
+export default createAppContainer(MainNavigator);

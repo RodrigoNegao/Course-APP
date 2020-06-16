@@ -9,6 +9,10 @@ const FiltersScreen = props => {
     );
 };
 
+FiltersScreen.navigationOptions = {
+    headerTitle: 'Filtro'
+}
+
 const styles = StyleSheet.create({
     screen:{
         flex:1,
