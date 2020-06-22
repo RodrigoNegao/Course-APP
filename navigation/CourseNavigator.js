@@ -21,6 +21,12 @@ const defaultStackNavOptions = {
     headerStyle:{
         backgroundColor: Platform.OS === 'android' ? Colors.primaryColor : 'white',
     },
+    headerTitleStyle: {
+        fontFamily: 'open-sans-bold'
+    },
+    headerBackTitleStyle:{
+        fontFamily: 'open-sans'
+    },
     headerTintColor: Platform.OS === 'android' ? 'white' : Colors.primaryColor ,
     headerTitle: 'A tela'
 };
@@ -83,18 +89,42 @@ const CourseFavTabNavigator =
     : createBottomTabNavigator(
         tabScreenConfig , {
         tabBarOptions:{
+        labelStyle: {
+            fontFamily:'open-sans'
+        },
         activeTintColor: Colors.accentColor
         }
     }
 );
 
-const FilterNavigator = createStackNavigator({
-    Filters: FiltersScreen,
-});
+const FilterNavigator = createStackNavigator(
+    {
+        Filters: FiltersScreen
+    },{
+        mode: 'modal',
+        navigationOptions:{
+                drawerLabel: 'Filtros'
+        },
+        defaultNavigationOptions: defaultStackNavOptions
+    }
+);
 
 const MainNavigator = createDrawerNavigator({
-    CoursesFavs: CourseFavTabNavigator,
+    CoursesFavs:{ 
+        screen: CourseFavTabNavigator,
+        navigationOptions:{
+            drawerLabel: 'CURSOS'
+        }
+    },
     Filters: FilterNavigator
-});
+},{
+    contentOptions: {
+            activeTintColor: Colors.accentColor,
+            labelStyle: {
+                fontFamily:'open-sans-bold'
+            }
+        }
+    }
+);
 
 export default createAppContainer(MainNavigator);

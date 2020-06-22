@@ -1,9 +1,22 @@
 import React from 'react';
-import {View, Button , Text, StyleSheet } from 'react-native';
+import { ScrollView, 
+         Image,
+         View,
+         Button,
+         Text,
+         StyleSheet 
+        } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 
 import { COURSES } from '../data/model-data';
 import HeaderButton from '../components/HeaderButton'; 
+import DefaultText from '../components/DefaultText';
+
+const ListItem = props => {
+    return ( <View style={styles.listItem}>
+                <DefaultText>{props.children}</DefaultText>
+                </View> )
+};
 
 const CourseDetailScreen = props => {
     const courseId = props.navigation.getParam('courseId');
@@ -11,11 +24,22 @@ const CourseDetailScreen = props => {
     const selectedCourse = COURSES.find(course => course.id === courseId);
     
     return (
-        <View style={styles.screen}>
-            <Text>{selectedCourse.title}</Text>
-            <Button title="Back to TOP" 
-                onPress={ () => { props.navigation.popToTop(); } } />
-        </View>
+        <ScrollView>
+            <Image source={{uri: selectedCourse.imageUrl}} 
+            style={styles.image} />
+            <View style={styles.details}>
+                <DefaultText>{selectedCourse.duration}m</DefaultText>
+                <DefaultText>{selectedCourse.complexity.toUpperCase()}</DefaultText>
+                <DefaultText>{selectedCourse.affordability.toUpperCase()}</DefaultText>
+            </View>
+            <Text style={styles.title}>In Detalhes</Text>
+                {selectedCourse.ingredients.map(ingredient => 
+                    (<ListItem key={ingredient}>{ingredient}</ListItem>))}
+            <Text style={styles.title}>Etapas</Text>
+                {selectedCourse.steps.map(step => 
+                        (<ListItem key={step}>{step}</ListItem>))}
+            
+        </ScrollView>
     );
 };
 
@@ -38,11 +62,35 @@ CourseDetailScreen.navigationOptions = (navigationData) => {
 };
 
 const styles = StyleSheet.create({
-    screen:{
-        flex:1,
-        justifyContent: 'center',
-        alignItems : 'center',
+    image:{
+        width: '100%',
+        height: 200,
     },
+    details:{
+        flexDirection: 'row',
+        padding: 15,
+        justifyContent: 'space-around'
+    },
+    title:{
+        fontFamily: 'open-sans-bold',
+        fontSize: 22,
+        textAlign:'center'
+    },
+    listItem:{
+        marginVertical: 10,
+        marginHorizontal: 20,
+        borderColor:'#ccc',
+        borderWidth: 1,
+        padding:10
+    }
 });
 
 export default CourseDetailScreen;
+
+{/* <View style={styles.screen}>
+                <Text>{selectedCourse.title}</Text>
+                <Button title="Back to TOP" 
+                    onPress={ () => { props.navigation.popToTop(); 
+                    } }
+                 />
+            </View> */}
