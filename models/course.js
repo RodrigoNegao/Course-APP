@@ -3,16 +3,16 @@ class Course {
         id,
         categoryIds,
         title,
-        affordability,
-        complexity,
+        affordability, // Jobs
+        complexity,    // New
         imageUrl,
-        duration,
-        ingredients,
-        steps,
-        isGlutenFree,
-        isVegan,
-        isVegetarian,
-        isLactoseFree) 
+        duration,     // year create
+        ingredients, // FrameWorks or Modulos
+        steps,       // Exemplos
+        isGlutenFree, //isFrameWork
+        isVegan,      // isMobile
+        isVegetarian, //isWeb
+        isLactoseFree)  //isDesktop
         {
          this.id = id;
          this.categoryIds = categoryIds;

@@ -4,14 +4,14 @@ import Course from '../models/course'
 export const CATEGORIES = [
     new Category('c1','Back End','#f5428d'),
     new Category('c2','Front End','#f54242'),
-    new Category('c3','FrameWork and MORE','#f5a442'),
-    new Category('c4','HTML','#f5d142'),
-    new Category('c5','Csharp','#368dff'),
-    new Category('c6','Design','#41d95d'),
-    new Category('c7','Xamarim','#9eecff'),
-    new Category('c8','Docker','#b9ffb0'),
-    new Category('c9','Deep Learning','#ffc7ff'),
-    new Category('c10','React Native','#47fced')
+    new Category('c3','FrameWork','#f5a442'),
+    new Category('c4','IDE','#f5d142'),
+    new Category('c5','Cloud/Nuvem','#368dff'),
+    new Category('c6','SDK','#41d95d'),
+    new Category('c7','Inteligencia Artificial','#9eecff'),
+    new Category('c8','Módulos/Bibliotecas','#b9ffb0'),
+    //new Category('c9','?????2','#ffc7ff'),
+   // new Category('c10','??????3','#47fced')
 ];
 
 export const COURSES = [
@@ -19,9 +19,336 @@ export const COURSES = [
       'm1',
       ['c1', 'c2'],
       'JavaScript',
+      'Dinamico',
+      'Funcional',
+      'https://i.ytimg.com/vi/QIy874Wn1kM/maxresdefault.jpg',
+      1995,
+      [
+        'Node.Js',
+        'React',
+        'Vue',
+        'React Native',
+        'BootStrap',
+        'JQuery'
+      ],
+      [
+        'React Native - Facebook',
+        'JavaScript - Google',
+        '?????'
+      ],
+      false,
+      true,
+      true,
+      true
+    ),
+  
+    new Course(
+      'm2',
+      ['c2'],
+      'HTML',
       'affordable',
       'simple',
-      'https://i.ytimg.com/vi/QIy874Wn1kM/maxresdefault.jpg',
+      'https://tecnoblog.net/wp-content/uploads/2014/10/html5.jpg',
+      1993,
+      [
+        'BootStrap',
+        'Foundation',
+        'HTML KickStart',
+        'Skeleton',
+        'HTML5 Boilerplate'
+      ],
+      [
+        'Foundation - HP, EA Esports, CISCO, Disney, Amazon',
+        'BootStrap - Twitter',
+        'Outros'
+      ],
+      false,
+      false,
+      false,
+      false
+    ),
+  
+    new Course(
+      'm3',
+      ['c3'],
+      'Python',
+      'pricey',
+      'Simples',
+      'https://datawider.com/wp-content/uploads/2019/11/How-to-Learn-Python.jpg',
+      45,
+      [
+        'Django',
+        'Panda',
+        'OpenCV',
+        'Anaconda',
+      ],
+      [
+        'Django - Pinterest, Udemy, Instagram',
+        'Anaconda - CISCO, HSBC',
+      ],
+      false,
+      false,
+      false,
+      true
+    ),
+  
+    new Course(
+      'm4',
+      ['c4'],
+      'ASP.NET',
+      'luxurious',
+      'challenging',
+      'https://arquivo.devmedia.com.br/cursos/imagem/curso_o-que-e-asp-net-mvc_1975.png',
+      60,
+      [
+        'API',
+        'Entity',
+      ],
+      [
+        'StackOverFlow',
+        'DELL',
+        'Microsoft',
+        'Aquaria',
+        'Digital Business',
+      ],
+      false,
+      false,
+      false,
+      false
+    ),
+  
+    new Course(
+      'm5',
+      ['c2', 'c5', 'c10'],
+      'CSS',
+      'luxurious',
+      'simple',
+      'https://www.foze.com.br/adm/assets/imagens/artigo/112/css.jpg',
+      1996,
+      [
+        'UIkit',
+        'Bulma.io',
+        'BootStrap',
+        'Foundation',
+      ],
+      [
+        'BootStap - Twitter',
+      ],
+      true,
+      false,
+      true,
+      true
+    ),
+  
+    new Course(
+      'm6',
+      ['c6', 'c10'],
+      'Django',
+      'affordable',
+      'hard',
+      'https://arquivo.devmedia.com.br/cursos/imagem/curso_o-que-e-django_1938.jpg',
+      2003,
+      [
+        'BootStrap',
+        'Django RESTful',
+        'Weasyprint',
+      ],
+      [
+        'Instagram'
+      ],
+      true,
+      false,
+      true,
+      false
+    ),
+  
+    new Course(
+      'm7',
+      ['c7'],
+      'Android Studio',
+      'affordable',
+      'simple',
+      'https://arquivo.devmedia.com.br/noticias/artigo_introducao-ao-android-studio_34003.jpg',
+      2013,
+      [
+        'Emulador',
+        'Java',
+      ],
+      [
+        'Google'
+      ],
+      true,
+      false,
+      true,
+      false
+    ),
+  
+    new Course(
+      'm8',
+      ['c8'],
+      'X CODE',
+      'pricey',
+      'challenging',
+      'https://cdn.pixabay.com/photo/2018/06/18/16/05https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlQBoUKz7V53ZyQaaD2FbbUGU56Jf9KchI9uEM3yjPpV6UrCU&s/indian-food-3482749_1280.jpg',
+      2014,
+      [
+        'Emulador',
+        'Plugins',        
+      ],
+      [
+        'IPhone',
+      ],
+      true,
+      false,
+      false,
+      true
+    ),
+  
+    new Course(
+      'm9',
+      ['c9'],
+      'Visual Studio Code',
+      'affordable',
+      'hard',
+      'https://cdn.clipart.email/d074dfee6ba8a68b8eb7ac77968a09c9_top-vs-code-extensions-to-improve-your-productivity-syntaxsofts-_402-210.png',
+      2018,
+      [
+        'Docker Plugin',
+        'Django Plugin',
+        'React Plugin',
+      ],
+      [
+        'Preheat oven to 190°C. Line a rimmed baking sheet with parchment paper.',
+        'Microsoft',
+      ],
+      true,
+      false,
+      true,
+      false
+    ),
+    new Course(
+      'm10',
+      ['c2', 'c5', 'c10'],
+      'Visual Studio Ano',
+      'luxurious',
+      'simple',
+      'https://pplware.sapo.pt/wp-content/uploads/2017/03/visual_studio_2017.jpg',
+      2001,
+      [
+        'ASP.NET',
+        'Windows Server',
+      ],
+      [
+        'Microsoft',
+      ],
+      true,
+      true,
+      true,
+      true
+    ),
+
+    new Course(
+      'm11',
+      ['c1', 'c2'],
+      'Docker',
+      'Dinamico',
+      'Simples',
+      'https://miro.medium.com/max/2820/1*ovRuAuqPf4r2xpiWh71rUg.png',
+      2010,
+      [
+        'DockerTools',
+        'Kubernetes',
+      ],
+      [
+        'Linux',
+        'AWS'
+      ],
+      false,
+      true,
+      true,
+      true
+    ),
+
+    new Course(
+      'm12',
+      ['c1', 'c2'],
+      'AWS',
+      'Dinamico',
+      'Simples',
+      'https://miro.medium.com/max/867/1*vb_oGv53xB5SoOg2WxAVHg.png',
+      2006,
+      [
+        '4 Tomatoes',
+        '1 Tablespoon of Olive Oil',
+        '1 Onion',
+        '250g Spaghetti',
+        'Spices',
+        'Cheese (optional)'
+      ],
+      [
+        'Cut the tomatoes and the onion into small pieces.',
+        'Boil some water - add salt to it once it boils.',
+        'Put the spaghetti into the boiling water - they should be done in about 10 to 12 minutes.',
+        'In the meantime, heaten up some olive oil and add the cut onion.',
+        'After 2 minutes, add the tomato pieces, salt, pepper and your other spices.',
+        'The sauce will be done once the spaghetti are.',
+        'Feel free to add some cheese on top of the finished dish.'
+      ],
+      false,
+      true,
+      true,
+      true
+    ),
+
+    new Course(
+      'm13',
+      ['c1', 'c2'],
+      'Azure',
+      'Dinamico',
+      'Simples',
+      'https://inovti.com.br/blog/wp-content/uploads/2019/10/download.png',
+      2010,
+      [
+        'ASP.NET',
+      ],
+      [
+        'Microsoft',
+      ],
+      false,
+      true,
+      true,
+      true
+    ),
+
+    new Course(
+      'm14',
+      ['c1', 'c2'],
+      'ANACONDA SDK',
+      'Dinamico',
+      'Simples',
+      'https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png',
+      2012,
+      [
+        'Jupyter',
+        'PANDA',
+        ''
+      ],
+      [
+        'CISCO'
+      ],
+      false,
+      true,
+      true,
+      true
+    ),
+
+    new Course(
+      'm15',
+      ['c1', 'c2'],
+      'PANDA',
+      'Dinamico',
+      'Simples',
+      'https://miro.medium.com/max/748/1*wP8ubuQEIrtxtfd-DTOTig.jpeg',
       20,
       [
         '4 Tomatoes',
@@ -45,293 +372,82 @@ export const COURSES = [
       true,
       true
     ),
-  
+
     new Course(
-      'm2',
-      ['c2'],
-      'HTML',
-      'affordable',
-      'simple',
-      'https://cdn.pixabay.com/photo/2018/07/11/21/51/toast-3532016_1280.jpg',
-      10,
-      [
-        '1 Slice White Bread',
-        '1 Slice Ham',
-        '1 Slice Pineapple',
-        '1-2 Slices of Cheese',
-        'Butter'
-      ],
-      [
-        'Butter one side of the white bread',
-        'Layer ham, the pineapple and cheese on the white bread',
-        'Bake the toast for round about 10 minutes in the oven at 200°C'
-      ],
-      false,
-      false,
-      false,
-      false
-    ),
-  
-    new Course(
-      'm3',
-      ['c3'],
-      'Python',
-      'pricey',
-      'simple',
-      'https://cdn.pixabay.com/photo/2014/10/23/18/05/burger-500054_1280.jpg',
-      45,
-      [
-        '300g Cattle Hack',
-        '1 Tomato',
-        '1 Cucumber',
-        '1 Onion',
-        'Ketchup',
-        '2 Burger Buns'
-      ],
-      [
-        'Form 2 patties',
-        'Fry the patties for c. 4 minutes on each side',
-        'Quickly fry the buns for c. 1 minute on each side',
-        'Bruch buns with ketchup',
-        'Serve burger with tomato, cucumber and onion'
-      ],
-      false,
-      false,
-      false,
-      true
-    ),
-  
-    new Course(
-      'm4',
-      ['c4'],
-      'ASP.NET',
-      'luxurious',
-      'challenging',
-      'https://cdn.pixabay.com/photo/2018/03/31/19/29/schnitzel-3279045_1280.jpg',
-      60,
-      [
-        '8 Veal Cutlets',
-        '4 Eggs',
-        '200g Bread Crumbs',
-        '100g Flour',
-        '300ml Butter',
-        '100g Vegetable Oil',
-        'Salt',
-        'Lemon Slices'
-      ],
-      [
-        'Tenderize the veal to about 2–4mm, and salt on both sides.',
-        'On a flat plate, stir the eggs briefly with a fork.',
-        'Lightly coat the cutlets in flour then dip into the egg, and finally, coat in breadcrumbs.',
-        'Heat the butter and oil in a large pan (allow the fat to get very hot) and fry the schnitzels until golden brown on both sides.',
-        'Make sure to toss the pan regularly so that the schnitzels are surrounded by oil and the crumbing becomes ‘fluffy’.',
-        'Remove, and drain on kitchen paper. Fry the parsley in the remaining oil and drain.',
-        'Place the schnitzels on awarmed plate and serve garnishedwith parsley and slices of lemon.'
-      ],
-      false,
-      false,
-      false,
-      false
-    ),
-  
-    new Course(
-      'm5',
-      ['c2', 'c5', 'c10'],
-      'CSS',
-      'luxurious',
-      'simple',
-      'https://cdn.pixabay.com/photo/2016/10/25/13/29/smoked-salmon-salad-1768890_1280.jpg',
-      15,
-      [
-        'Arugula',
-        "Lamb's Lettuce",
-        'Parsley',
-        'Fennel',
-        '200g Smoked Salmon',
-        'Mustard',
-        'Balsamic Vinegar',
-        'Olive Oil',
-        'Salt and Pepper'
-      ],
-      [
-        'Wash and cut salad and herbs',
-        'Dice the salmon',
-        'Process mustard, vinegar and olive oil into a dessing',
-        'Prepare the salad',
-        'Add salmon cubes and dressing'
-      ],
-      true,
-      false,
-      true,
-      true
-    ),
-  
-    new Course(
-      'm6',
-      ['c6', 'c10'],
-      'Django',
-      'affordable',
-      'hard',
-      'https://cdn.pixabay.com/photo/2017/05/01/05/18/pastry-2274750_1280.jpg',
-      240,
-      [
-        '4 Sheets of Gelatine',
-        '150ml Orange Juice',
-        '80g Sugar',
-        '300g Yoghurt',
-        '200g Cream',
-        'Orange Peel'
-      ],
-      [
-        'Dissolve gelatine in pot',
-        'Add orange juice and sugar',
-        'Take pot off the stove',
-        'Add 2 tablespoons of yoghurt',
-        'Stir gelatin under remaining yoghurt',
-        'Cool everything down in the refrigerator',
-        'Whip the cream and lift it under die orange mass',
-        'Cool down again for at least 4 hours',
-        'Serve with orange peel'
-      ],
-      true,
-      false,
-      true,
-      false
-    ),
-  
-    new Course(
-      'm7',
-      ['c7'],
-      'Android Studio',
-      'affordable',
-      'simple',
-      'https://cdn.pixabay.com/photo/2018/07/10/21/23/pancake-3529653_1280.jpg',
+      'm16',
+      ['c1', 'c2'],
+      'React Native',
+      'Dinamico',
+      'Simples',
+      'https://img-a.udemycdn.com/course/750x422/2497080_fe57.jpg',
       20,
       [
-        '1 1/2 Cups all-purpose Flour',
-        '3 1/2 Teaspoons Baking Powder',
-        '1 Teaspoon Salt',
-        '1 Tablespoon White Sugar',
-        '1 1/4 cups Milk',
-        '1 Egg',
-        '3 Tablespoons Butter, melted'
+        'React',
+        'Toolbar'
       ],
       [
-        'In a large bowl, sift together the flour, baking powder, salt and sugar.',
-        'Make a well in the center and pour in the milk, egg and melted butter; mix until smooth.',
-        'Heat a lightly oiled griddle or frying pan over medium high heat.',
-        'Pour or scoop the batter onto the griddle, using approximately 1/4 cup for each pancake. Brown on both sides and serve hot.'
+        'Facebook',
       ],
-      true,
       false,
       true,
-      false
+      true,
+      true
     ),
-  
+
     new Course(
-      'm8',
-      ['c8'],
-      'X CODE',
-      'pricey',
-      'challenging',
-      'https://cdn.pixabay.com/photo/2018/06/18/16/05/indian-food-3482749_1280.jpg',
-      35,
+      'm17',
+      ['c1', 'c2'],
+      'BootStrap',
+      'Dinamico',
+      'Simples',
+      'https://speckyboy.com/wp-content/uploads/2019/12/boot-admin-th-500x333.jpg',
+      2011,
       [
-        '4 Chicken Breasts',
+        'JQuery até BootStrap4'
+      ],
+      [
+        'Cut the tomatoes and the onion into small pieces.',
+        'Boil some water - add salt to it once it boils.',
+        'Put the spaghetti into the boiling water - they should be done in about 10 to 12 minutes.',
+        'In the meantime, heaten up some olive oil and add the cut onion.',
+        'After 2 minutes, add the tomato pieces, salt, pepper and your other spices.',
+        'The sauce will be done once the spaghetti are.',
+        'Feel free to add some cheese on top of the finished dish.'
+      ],
+      false,
+      true,
+      true,
+      true
+    ),
+
+    new Course(
+      'm18',
+      ['c1', 'c2'],
+      'C#(Csharp)',
+      'Dinamico',
+      'Simples',
+      'https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png',
+      2000,
+      [
+        '4 Tomatoes',
+        '1 Tablespoon of Olive Oil',
         '1 Onion',
-        '2 Cloves of Garlic',
-        '1 Piece of Ginger',
-        '4 Tablespoons Almonds',
-        '1 Teaspoon Cayenne Pepper',
-        '500ml Coconut Milk'
+        '250g Spaghetti',
+        'Spices',
+        'Cheese (optional)'
       ],
       [
-        'Slice and fry the chicken breast',
-        'Process onion, garlic and ginger into paste and sauté everything',
-        'Add spices and stir fry',
-        'Add chicken breast + 250ml of water and cook everything for 10 minutes',
-        'Add coconut milk',
-        'Serve with rice'
+        'Cut the tomatoes and the onion into small pieces.',
+        'Boil some water - add salt to it once it boils.',
+        'Put the spaghetti into the boiling water - they should be done in about 10 to 12 minutes.',
+        'In the meantime, heaten up some olive oil and add the cut onion.',
+        'After 2 minutes, add the tomato pieces, salt, pepper and your other spices.',
+        'The sauce will be done once the spaghetti are.',
+        'Feel free to add some cheese on top of the finished dish.'
       ],
-      true,
       false,
-      false,
-      true
-    ),
-  
-    new Course(
-      'm9',
-      ['c9'],
-      'Figma',
-      'affordable',
-      'hard',
-      'https://cdn.pixabay.com/photo/2014/08/07/21/07/souffle-412785_1280.jpg',
-      45,
-      [
-        '1 Teaspoon melted Butter',
-        '2 Tablespoons white Sugar',
-        '2 Ounces 70% dark Chocolate, broken into pieces',
-        '1 Tablespoon Butter',
-        '1 Tablespoon all-purpose Flour',
-        '4 1/3 tablespoons cold Milk',
-        '1 Pinch Salt',
-        '1 Pinch Cayenne Pepper',
-        '1 Large Egg Yolk',
-        '2 Large Egg Whites',
-        '1 Pinch Cream of Tartar',
-        '1 Tablespoon white Sugar'
-      ],
-      [
-        'Preheat oven to 190°C. Line a rimmed baking sheet with parchment paper.',
-        'Brush bottom and sides of 2 ramekins lightly with 1 teaspoon melted butter; cover bottom and sides right up to the rim.',
-        'Add 1 tablespoon white sugar to ramekins. Rotate ramekins until sugar coats all surfaces.',
-        'Place chocolate pieces in a metal mixing bowl.',
-        'Place bowl over a pan of about 3 cups hot water over low heat.',
-        'Melt 1 tablespoon butter in a skillet over medium heat. Sprinkle in flour. Whisk until flour is incorporated into butter and mixture thickens.',
-        'Whisk in cold milk until mixture becomes smooth and thickens. Transfer mixture to bowl with melted chocolate.',
-        'Add salt and cayenne pepper. Mix together thoroughly. Add egg yolk and mix to combine.',
-        'Leave bowl above the hot (not simmering) water to keep chocolate warm while you whip the egg whites.',
-        'Place 2 egg whites in a mixing bowl; add cream of tartar. Whisk until mixture begins to thicken and a drizzle from the whisk stays on the surface about 1 second before disappearing into the mix.',
-        'Add 1/3 of sugar and whisk in. Whisk in a bit more sugar about 15 seconds.',
-        'whisk in the rest of the sugar. Continue whisking until mixture is about as thick as shaving cream and holds soft peaks, 3 to 5 minutes.',
-        'Transfer a little less than half of egg whites to chocolate.',
-        'Mix until egg whites are thoroughly incorporated into the chocolate.',
-        'Add the rest of the egg whites; gently fold into the chocolate with a spatula, lifting from the bottom and folding over.',
-        'Stop mixing after the egg white disappears. Divide mixture between 2 prepared ramekins. Place ramekins on prepared baking sheet.',
-        'Bake in preheated oven until scuffles are puffed and have risen above the top of the rims, 12 to 15 minutes.'
-      ],
-      true,
-      false,
-      true,
-      false
-    ),
-    new Course(
-      'm10',
-      ['c2', 'c5', 'c10'],
-      'GIMP',
-      'luxurious',
-      'simple',
-      'https://cdn.pixabay.com/photo/2018/04/09/18/26/asparagus-3304997_1280.jpg',
-      30,
-      [
-        'White and Green Asparagus',
-        '30g Pine Nuts',
-        '300g Cherry Tomatoes',
-        'Salad',
-        'Salt, Pepper and Olive Oil'
-      ],
-      [
-        'Wash, peel and cut the asparagus',
-        'Cook in salted water',
-        'Salt and pepper the asparagus',
-        'Roast the pine nuts',
-        'Halve the tomatoes',
-        'Mix with asparagus, salad and dressing',
-        'Serve with Baguette'
-      ],
-      true,
       true,
       true,
       true
-    )
+    ),
   ];

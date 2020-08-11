@@ -32,10 +32,10 @@ const CourseDetailScreen = props => {
                 <DefaultText>{selectedCourse.complexity.toUpperCase()}</DefaultText>
                 <DefaultText>{selectedCourse.affordability.toUpperCase()}</DefaultText>
             </View>
-            <Text style={styles.title}>In Detalhes</Text>
+            <Text style={styles.title}>Para que é usado:</Text>
                 {selectedCourse.ingredients.map(ingredient => 
                     (<ListItem key={ingredient}>{ingredient}</ListItem>))}
-            <Text style={styles.title}>Etapas</Text>
+            <Text style={styles.title}>Empresas que usam:</Text>
                 {selectedCourse.steps.map(step => 
                         (<ListItem key={step}>{step}</ListItem>))}
             
