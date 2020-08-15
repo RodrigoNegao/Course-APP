@@ -24,21 +24,21 @@ const FilterSwith = props =>{
 const FiltersScreen = props => {
     const { navigation } = props;
 
-    const [isGlutenFree, setIsGlutenFree] = useState (false);
-    const [isLactoseFree, setIsLactoseFree] = useState (false);
-    const [isVegan, setIsVegan] = useState (false);
-    const [isVegetarian, setIsVegetarian] = useState (false);
+    const [isFrameWork, setIsFrameWork] = useState (false);
+    const [isDesktop, setIsDesktop] = useState (false);
+    const [isMobile, setIsMobile] = useState (false);
+    const [isWeb, setIsWeb] = useState (false);
 
     const saveFilters = useCallback(() => {
         const appliedFilders = {
-             glutenFree: isGlutenFree,
-             lactoseFree: isLactoseFree,
-             vegan: isVegan,
-             vegetarian: isVegetarian,
+             framework: isFrameWork,
+             desktop: isDesktop,
+             mobile: isMobile,
+             web: isWeb,
         };
 
         console.log(appliedFilders);
-    }, [isGlutenFree,isLactoseFree,isVegan,isVegetarian]);
+    }, [isFrameWork,isDesktop,isMobile,isWeb]);
 
     useEffect(() => {
         navigation.setParams({save: saveFilters});
@@ -46,22 +46,22 @@ const FiltersScreen = props => {
 
     return (
         <View style={styles.screen}>
-            <Text style={styles.title}> Tipos de Filtro/ Restrições </Text>
-            <FilterSwith label='Gluten-free' 
-                         state={isGlutenFree}
-                         onChange={newValue => setIsGlutenFree(newValue)}
+            <Text style={styles.title}> Tipos de Filtro </Text>
+            <FilterSwith label='FrameWork' 
+                         state={isFrameWork}
+                         onChange={newValue => setIsFrameWork(newValue)}
             />
-            <FilterSwith label='Lactose-free' 
-                         state={isLactoseFree}
-                         onChange={newValue => setIsLactoseFree(newValue)}
+            <FilterSwith label='Desktop' 
+                         state={isDesktop}
+                         onChange={newValue => setIsDesktop(newValue)}
             />
-            <FilterSwith label='Vegan' 
-                         state={isVegan}
-                         onChange={newValue => setIsVegan(newValue)}
+            <FilterSwith label='Mobile' 
+                         state={isMobile}
+                         onChange={newValue => setIsMobile(newValue)}
             />
-            <FilterSwith label='Vegetarian' 
-                         state={isVegetarian}
-                         onChange={newValue => setIsVegetarian(newValue)}
+            <FilterSwith label='Web' 
+                         state={isWeb}
+                         onChange={newValue => setIsWeb(newValue)}
             />
         </View>
     );
@@ -116,6 +116,6 @@ export default FiltersScreen;
                 // <Switch 
                 //         trackColor={{true: Colors.primaryColor}}
                 //         thumbColor={Platform.OS === 'android' ? Colors.primaryColor : ''}
-                //         value={isGlutenFree} 
-                //         onValueChange={newValue => setIsGlutenFree(newValue)}
+                //         value={isFrameWork} 
+                //         onValueChange={newValue => setIsFrameWork(newValue)}
                 //  />

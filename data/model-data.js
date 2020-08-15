@@ -19,8 +19,8 @@ export const COURSES = [
       'm1',
       ['c1', 'c2'],
       'JavaScript',
-      'Dinamico',
-      'Funcional',
+      'SIM',
+      'Todos',
       'https://i.ytimg.com/vi/QIy874Wn1kM/maxresdefault.jpg',
       1995,
       [
@@ -39,15 +39,15 @@ export const COURSES = [
       false,
       true,
       true,
-      true
+      false
     ),
   
     new Course(
       'm2',
       ['c2'],
       'HTML',
-      'affordable',
-      'simple',
+      'SIM',
+      'TODOS',
       'https://tecnoblog.net/wp-content/uploads/2014/10/html5.jpg',
       1993,
       [
@@ -64,18 +64,18 @@ export const COURSES = [
       ],
       false,
       false,
-      false,
+      true,
       false
     ),
   
     new Course(
       'm3',
-      ['c3'],
+      ['c1','c7'],
       'Python',
-      'pricey',
-      'Simples',
+      'Sim',
+      'TODOS',
       'https://datawider.com/wp-content/uploads/2019/11/How-to-Learn-Python.jpg',
-      45,
+      1991,
       [
         'Django',
         'Panda',
@@ -94,10 +94,10 @@ export const COURSES = [
   
     new Course(
       'm4',
-      ['c4'],
+      ['c1','c3'],
       'ASP.NET',
-      'luxurious',
-      'challenging',
+      'SIM',
+      'TODOS',
       'https://arquivo.devmedia.com.br/cursos/imagem/curso_o-que-e-asp-net-mvc_1975.png',
       60,
       [
@@ -119,10 +119,10 @@ export const COURSES = [
   
     new Course(
       'm5',
-      ['c2', 'c5', 'c10'],
+      ['c2'],
       'CSS',
-      'luxurious',
-      'simple',
+      'SIM',
+      'TODOS',
       'https://www.foze.com.br/adm/assets/imagens/artigo/112/css.jpg',
       1996,
       [
@@ -142,10 +142,10 @@ export const COURSES = [
   
     new Course(
       'm6',
-      ['c6', 'c10'],
+      ['c1', 'c3'],
       'Django',
-      'affordable',
-      'hard',
+      'SIM',
+      'TODOS',
       'https://arquivo.devmedia.com.br/cursos/imagem/curso_o-que-e-django_1938.jpg',
       2003,
       [
@@ -164,10 +164,10 @@ export const COURSES = [
   
     new Course(
       'm7',
-      ['c7'],
+      ['c6'],
       'Android Studio',
-      'affordable',
-      'simple',
+      'SIM',
+      'TODOS',
       'https://arquivo.devmedia.com.br/noticias/artigo_introducao-ao-android-studio_34003.jpg',
       2013,
       [
@@ -185,18 +185,18 @@ export const COURSES = [
   
     new Course(
       'm8',
-      ['c8'],
+      ['c6'],
       'X CODE',
-      'pricey',
-      'challenging',
+      'SIM',
+      'MAC',
       'https://cdn.pixabay.com/photo/2018/06/18/16/05https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlQBoUKz7V53ZyQaaD2FbbUGU56Jf9KchI9uEM3yjPpV6UrCU&s/indian-food-3482749_1280.jpg',
       2014,
       [
         'Emulador',
-        'Plugins',        
+        'Plugins',
       ],
       [
-        'IPhone',
+        'Apple - IPhone',
       ],
       true,
       false,
@@ -206,10 +206,10 @@ export const COURSES = [
   
     new Course(
       'm9',
-      ['c9'],
+      ['c4'],
       'Visual Studio Code',
-      'affordable',
-      'hard',
+      'SIM',
+      'TODOS',
       'https://cdn.clipart.email/d074dfee6ba8a68b8eb7ac77968a09c9_top-vs-code-extensions-to-improve-your-productivity-syntaxsofts-_402-210.png',
       2018,
       [
@@ -218,7 +218,6 @@ export const COURSES = [
         'React Plugin',
       ],
       [
-        'Preheat oven to 190°C. Line a rimmed baking sheet with parchment paper.',
         'Microsoft',
       ],
       true,
@@ -226,12 +225,13 @@ export const COURSES = [
       true,
       false
     ),
+    
     new Course(
       'm10',
-      ['c2', 'c5', 'c10'],
+      ['c6'],
       'Visual Studio Ano',
-      'luxurious',
-      'simple',
+      'DEV',
+      'TODOS',
       'https://pplware.sapo.pt/wp-content/uploads/2017/03/visual_studio_2017.jpg',
       2001,
       [
@@ -249,10 +249,10 @@ export const COURSES = [
 
     new Course(
       'm11',
-      ['c1', 'c2'],
+      ['c1', 'c5'],
       'Docker',
-      'Dinamico',
-      'Simples',
+      'SIM',
+      '- Win H',
       'https://miro.medium.com/max/2820/1*ovRuAuqPf4r2xpiWh71rUg.png',
       2010,
       [
@@ -271,28 +271,17 @@ export const COURSES = [
 
     new Course(
       'm12',
-      ['c1', 'c2'],
+      ['c5'],
       'AWS',
-      'Dinamico',
-      'Simples',
+      'SIM',
+      'CLOUD',
       'https://miro.medium.com/max/867/1*vb_oGv53xB5SoOg2WxAVHg.png',
       2006,
       [
-        '4 Tomatoes',
-        '1 Tablespoon of Olive Oil',
-        '1 Onion',
-        '250g Spaghetti',
-        'Spices',
-        'Cheese (optional)'
+        'Docker'
       ],
       [
-        'Cut the tomatoes and the onion into small pieces.',
-        'Boil some water - add salt to it once it boils.',
-        'Put the spaghetti into the boiling water - they should be done in about 10 to 12 minutes.',
-        'In the meantime, heaten up some olive oil and add the cut onion.',
-        'After 2 minutes, add the tomato pieces, salt, pepper and your other spices.',
-        'The sauce will be done once the spaghetti are.',
-        'Feel free to add some cheese on top of the finished dish.'
+        'Amazon'
       ],
       false,
       true,
@@ -302,10 +291,10 @@ export const COURSES = [
 
     new Course(
       'm13',
-      ['c1', 'c2'],
+      ['c5'],
       'Azure',
-      'Dinamico',
-      'Simples',
+      'TRIAL',
+      'CLOUD',
       'https://inovti.com.br/blog/wp-content/uploads/2019/10/download.png',
       2010,
       [
@@ -322,16 +311,16 @@ export const COURSES = [
 
     new Course(
       'm14',
-      ['c1', 'c2'],
+      ['c6'],
       'ANACONDA SDK',
-      'Dinamico',
-      'Simples',
+      'SIM',
+      'TODOS',
       'https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png',
       2012,
       [
         'Jupyter',
         'PANDA',
-        ''
+        'Python'
       ],
       [
         'CISCO'
@@ -344,28 +333,17 @@ export const COURSES = [
 
     new Course(
       'm15',
-      ['c1', 'c2'],
+      ['c7', 'c8'],
       'PANDA',
-      'Dinamico',
-      'Simples',
+      'SIM',
+      'TODOS',
       'https://miro.medium.com/max/748/1*wP8ubuQEIrtxtfd-DTOTig.jpeg',
       20,
       [
-        '4 Tomatoes',
-        '1 Tablespoon of Olive Oil',
-        '1 Onion',
-        '250g Spaghetti',
-        'Spices',
-        'Cheese (optional)'
+        'Estatisca'
       ],
       [
-        'Cut the tomatoes and the onion into small pieces.',
-        'Boil some water - add salt to it once it boils.',
-        'Put the spaghetti into the boiling water - they should be done in about 10 to 12 minutes.',
-        'In the meantime, heaten up some olive oil and add the cut onion.',
-        'After 2 minutes, add the tomato pieces, salt, pepper and your other spices.',
-        'The sauce will be done once the spaghetti are.',
-        'Feel free to add some cheese on top of the finished dish.'
+        'Anaconda'
       ],
       false,
       true,
@@ -375,12 +353,12 @@ export const COURSES = [
 
     new Course(
       'm16',
-      ['c1', 'c2'],
+      ['c2', 'c3'],
       'React Native',
-      'Dinamico',
-      'Simples',
+      'SIM',
+      'ANDROID/IPHONE',
       'https://img-a.udemycdn.com/course/750x422/2497080_fe57.jpg',
-      20,
+      2013,
       [
         'React',
         'Toolbar'
@@ -396,23 +374,17 @@ export const COURSES = [
 
     new Course(
       'm17',
-      ['c1', 'c2'],
+      ['c2', 'c3'],
       'BootStrap',
-      'Dinamico',
-      'Simples',
+      'SIM',
+      'TODOS',
       'https://speckyboy.com/wp-content/uploads/2019/12/boot-admin-th-500x333.jpg',
       2011,
       [
         'JQuery até BootStrap4'
       ],
       [
-        'Cut the tomatoes and the onion into small pieces.',
-        'Boil some water - add salt to it once it boils.',
-        'Put the spaghetti into the boiling water - they should be done in about 10 to 12 minutes.',
-        'In the meantime, heaten up some olive oil and add the cut onion.',
-        'After 2 minutes, add the tomato pieces, salt, pepper and your other spices.',
-        'The sauce will be done once the spaghetti are.',
-        'Feel free to add some cheese on top of the finished dish.'
+        'Twitter'
       ],
       false,
       true,
@@ -422,28 +394,20 @@ export const COURSES = [
 
     new Course(
       'm18',
-      ['c1', 'c2'],
+      ['c1'],
       'C#(Csharp)',
-      'Dinamico',
-      'Simples',
+      'SIM',
+      'WINDOWS',
       'https://pluralsight.imgix.net/paths/path-icons/csharp-e7b8fcd4ce.png',
       2000,
       [
-        '4 Tomatoes',
-        '1 Tablespoon of Olive Oil',
-        '1 Onion',
-        '250g Spaghetti',
-        'Spices',
-        'Cheese (optional)'
+        '.NET',
+        'Xamarin',
+        'ASP.NET',
+        'ASP.NET Core'
       ],
       [
-        'Cut the tomatoes and the onion into small pieces.',
-        'Boil some water - add salt to it once it boils.',
-        'Put the spaghetti into the boiling water - they should be done in about 10 to 12 minutes.',
-        'In the meantime, heaten up some olive oil and add the cut onion.',
-        'After 2 minutes, add the tomato pieces, salt, pepper and your other spices.',
-        'The sauce will be done once the spaghetti are.',
-        'Feel free to add some cheese on top of the finished dish.'
+        'Microsoft'
       ],
       false,
       true,

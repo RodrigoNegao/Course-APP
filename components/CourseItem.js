@@ -22,9 +22,9 @@ const CourseItem = props => {
                         </ImageBackground>
                     </View>
                     <View style={{...styles.courseRow, ...styles.courseDetail}}>
-                        <DefaultText>{props.duration}m</DefaultText>
-                        <DefaultText>{props.complexity.toUpperCase()}</DefaultText>
-                        <DefaultText>{props.affordability.toUpperCase()}</DefaultText>
+                        <DefaultText>{props.yearCreate}</DefaultText>
+                        <DefaultText>{props.osystem.toUpperCase()}</DefaultText>
+                        <DefaultText>{props.opensource.toUpperCase()}</DefaultText>
                     </View>
                 </View>
             </TouchableOpacity>

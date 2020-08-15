@@ -28,16 +28,16 @@ const CourseDetailScreen = props => {
             <Image source={{uri: selectedCourse.imageUrl}} 
             style={styles.image} />
             <View style={styles.details}>
-                <DefaultText>{selectedCourse.duration}m</DefaultText>
-                <DefaultText>{selectedCourse.complexity.toUpperCase()}</DefaultText>
-                <DefaultText>{selectedCourse.affordability.toUpperCase()}</DefaultText>
+                <DefaultText>Dev em:{selectedCourse.yearCreate}</DefaultText>
+                <DefaultText>SO:{selectedCourse.osystem.toUpperCase()}</DefaultText>
+                <DefaultText>OpenSource:{selectedCourse.opensource.toUpperCase()}</DefaultText>
             </View>
-            <Text style={styles.title}>Para que é usado:</Text>
-                {selectedCourse.ingredients.map(ingredient => 
-                    (<ListItem key={ingredient}>{ingredient}</ListItem>))}
-            <Text style={styles.title}>Empresas que usam:</Text>
-                {selectedCourse.steps.map(step => 
-                        (<ListItem key={step}>{step}</ListItem>))}
+            <Text style={styles.title}>Tecnologias:</Text>
+                {selectedCourse.technologies.map(technology => 
+                    (<ListItem key={technology}>{technology}</ListItem>))}
+            <Text style={styles.title}>Empresas:</Text>
+                {selectedCourse.companies.map(company => 
+                        (<ListItem key={company}>{company}</ListItem>))}
             
         </ScrollView>
     );

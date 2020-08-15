@@ -9,9 +9,9 @@ const CourseList = props => {
         return(
             <CourseItem title={itemData.item.title}
             image={itemData.item.imageUrl}
-            duration={itemData.item.duration}
-            complexity={itemData.item.complexity}
-            affordability={itemData.item.affordability}
+            yearCreate={itemData.item.yearCreate}
+            osystem={itemData.item.osystem}
+            opensource={itemData.item.opensource}
             onSelectCourse={() => {
                 props.navigation.navigate('CourseDetail',{
                     courseId: itemData.item.id

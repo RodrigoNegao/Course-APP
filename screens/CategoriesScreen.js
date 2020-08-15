@@ -38,7 +38,7 @@ const CategoriesScreen = props => {
 
 CategoriesScreen.navigationOptions = navData => {
     return {
-        headerTitle: 'Tipos de Cursos', 
+        headerTitle: 'Tecnologias', 
         headerLeft: () =>( <HeaderButtons
                         HeaderButtonComponent={HeaderButton}>
                             <Item title='Menu' 

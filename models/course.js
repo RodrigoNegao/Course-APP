@@ -3,30 +3,30 @@ class Course {
         id,
         categoryIds,
         title,
-        affordability, // Jobs
-        complexity,    // New
+        opensource, // affordability
+        osystem,    // OSystem complexity
         imageUrl,
-        duration,     // year create
-        ingredients, // FrameWorks or Modulos
-        steps,       // Exemplos
-        isGlutenFree, //isFrameWork
-        isVegan,      // isMobile
-        isVegetarian, //isWeb
-        isLactoseFree)  //isDesktop
+        yearCreate,     // duration
+        technologies, // ingredients
+        companies,   // steps
+        isFrameWork, //isGlutenFree
+        isMobile,      // isVegan
+        isWeb, //isVegetarian
+        isDesktop)  //isLactoseFree
         {
          this.id = id;
          this.categoryIds = categoryIds;
          this.title = title;
-         this.affordability = affordability;
-         this.complexity = complexity;
+         this.opensource = opensource;
+         this.osystem = osystem;
          this.imageUrl = imageUrl;
-         this.duration = duration;
-         this.ingredients = ingredients;
-         this.steps = steps;
-         this.isGlutenFree = isGlutenFree;
-         this.isVegan = isVegan;
-         this.isVegetarian = isVegetarian;
-         this.isLactoseFree = isLactoseFree;
+         this.yearCreate = yearCreate;
+         this.technologies = technologies;
+         this.companies = companies;
+         this.isFrameWork = isFrameWork;
+         this.isMobile = isMobile;
+         this.isWeb = isWeb;
+         this.isDesktop = isDesktop;
     }
 }
 
