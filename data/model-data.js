@@ -34,7 +34,6 @@ export const COURSES = [
       [
         'React Native - Facebook',
         'JavaScript - Google',
-        '?????'
       ],
       false,
       true,
@@ -60,7 +59,6 @@ export const COURSES = [
       [
         'Foundation - HP, EA Esports, CISCO, Disney, Amazon',
         'BootStrap - Twitter',
-        'Outros'
       ],
       false,
       false,
@@ -132,7 +130,7 @@ export const COURSES = [
         'Foundation',
       ],
       [
-        'BootStap - Twitter',
+        'BootStrap - Twitter',
       ],
       true,
       false,
@@ -189,7 +187,7 @@ export const COURSES = [
       'X CODE',
       'SIM',
       'MAC',
-      'https://cdn.pixabay.com/photo/2018/06/18/16/05https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlQBoUKz7V53ZyQaaD2FbbUGU56Jf9KchI9uEM3yjPpV6UrCU&s/indian-food-3482749_1280.jpg',
+      'https://developer.apple.com/news/images/og/xcode-og-twitter.png',
       2014,
       [
         'Emulador',
@@ -281,7 +279,7 @@ export const COURSES = [
         'Docker'
       ],
       [
-        'Amazon'
+        'Amazon',
       ],
       false,
       true,
