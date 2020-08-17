@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import {View, Text, StyleSheet, Switch , Platform } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import { useDispatch } from 'react-redux';
 
 import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/Colors';
+import { setFilters } from '../store/actions/courses';
 
 const FilterSwith = props =>{
         return(
@@ -29,16 +31,18 @@ const FiltersScreen = props => {
     const [isMobile, setIsMobile] = useState (false);
     const [isWeb, setIsWeb] = useState (false);
 
+    const dispatch = useDispatch();
+
     const saveFilters = useCallback(() => {
-        const appliedFilders = {
+        const appliedFilters = {
              framework: isFrameWork,
              desktop: isDesktop,
              mobile: isMobile,
              web: isWeb,
-        };
-
-        console.log(appliedFilders);
-    }, [isFrameWork,isDesktop,isMobile,isWeb]);
+        };        
+        console.log(appliedFilters);
+        dispatch(setFilters(appliedFilters));
+    }, [isFrameWork,isDesktop,isMobile,isWeb,dispatch]);
 
     useEffect(() => {
         navigation.setParams({save: saveFilters});

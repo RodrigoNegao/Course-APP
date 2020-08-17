@@ -5,11 +5,18 @@ import { useSelector } from 'react-redux';
 
 import HeaderButton from '../components/HeaderButton';
 import CourseList from '../components/CourseList';
+import DefaultText from '../components/DefaultText'
 import { COURSES } from '../data/model-data';
 
 const FavoritesScreen = props => {
     const favCourses = useSelector(state => state.courses.favoriteCourses)
-   
+    
+    if (favCourses.length === 0 || !favCourses) {
+        return <View style={styles.content}>
+            <Text>Não existe Favorito no momento.Então comece a adicionar tocando na Estrela no Canto Superior Direito! </Text>
+        </View>
+    }
+
     return (
         <CourseList 
             listData={favCourses}
@@ -32,12 +39,12 @@ FavoritesScreen.navigationOptions = navData => {
     }
 };
 
-// const styles = StyleSheet.create({
-//     screen:{
-//         flex:1,
-//         justifyContent: 'center',
-//         alignItems : 'center',
-//     },
-// });
+const styles = StyleSheet.create({
+    content:{
+        flex:1,
+        justifyContent: 'center',
+        alignItems : 'center',
+    },
+});
 
 export default FavoritesScreen;

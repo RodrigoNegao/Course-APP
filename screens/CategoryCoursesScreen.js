@@ -1,8 +1,10 @@
 import React from 'react';
+import { View,StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import { CATEGORIES, COURSES } from '../data/model-data';
 import CourseList from '../components/CourseList';
+import DefaultText from '../components/DefaultText';
 
 const CategoryCoursesScreen = props => {
 
@@ -10,13 +12,19 @@ const CategoryCoursesScreen = props => {
 
     const availableCourses = useSelector( state => state.courses.filteredCourses);
 
-    const displayedCourse = availableCourses.filter(
+    const displayedCourses = availableCourses.filter(
         course => course.categoryIds.indexOf(catId) >= 0 
     );
 
+    if (displayedCourses.length === 0){
+        return <View style={styles.content}>
+        <DefaultText>Tecnologias não encontrada, cheque seus filtros.</DefaultText>
+        </View>
+    }
+
     return (
         <CourseList 
-        listData={displayedCourse}
+        listData={displayedCourses}
         navigation={props.navigation}
         />
 
@@ -34,5 +42,13 @@ CategoryCoursesScreen.navigationOptions = navigationData => {
         headerTitle: selectedCategory.title ,
     };
 };
+
+const styles = StyleSheet.create({
+    content:{
+        flex:1,
+        justifyContent: 'center',
+        alignItems : 'center',
+    },
+});
 
 export default CategoryCoursesScreen;
