@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
 import { CATEGORIES, COURSES } from '../data/model-data';
 import CourseList from '../components/CourseList';
@@ -7,7 +8,9 @@ const CategoryCoursesScreen = props => {
 
     const catId = props.navigation.getParam('categoryId');    
 
-    const displayedCourse = COURSES.filter(
+    const availableCourses = useSelector( state => state.courses.filteredCourses);
+
+    const displayedCourse = availableCourses.filter(
         course => course.categoryIds.indexOf(catId) >= 0 
     );
 

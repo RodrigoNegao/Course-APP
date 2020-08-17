@@ -413,5 +413,3 @@ export const COURSES = [
       true
     ),
   ];
-
-  //TEST

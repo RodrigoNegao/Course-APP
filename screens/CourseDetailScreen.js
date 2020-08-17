@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { ScrollView, 
          Image,
          View,
-         Button,
          Text,
          StyleSheet 
         } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { COURSES } from '../data/model-data';
+//import { COURSES } from '../data/model-data';
 import HeaderButton from '../components/HeaderButton'; 
 import DefaultText from '../components/DefaultText';
+import { toggleFavorite } from '../store/actions/courses'
 
 const ListItem = props => {
     return ( <View style={styles.listItem}>
@@ -19,10 +20,31 @@ const ListItem = props => {
 };
 
 const CourseDetailScreen = props => {
-    const courseId = props.navigation.getParam('courseId');
-
-    const selectedCourse = COURSES.find(course => course.id === courseId);
+    const availableCourses = useSelector(state => state.courses.courses);
     
+    const courseId = props.navigation.getParam('courseId');
+    
+    const currentCourseIsFavorite = useSelector(state => 
+        state.courses.favoriteCourses.some(course => course.id === courseId));
+
+    const selectedCourse = availableCourses.find(course => course.id === courseId);
+    
+    const dispatch = useDispatch();
+
+    const toggleFavoriteHandler = useCallback(() => {
+        dispatch(toggleFavorite(courseId));
+    },[dispatch, courseId]);
+
+    useEffect(() => {
+        //props.navigation.setParams({courseTitle: selectedCourse.title});
+        props.navigation.setParams({toggleFav: toggleFavoriteHandler});
+    },[toggleFavoriteHandler]);
+
+    useEffect(() => {
+        props.navigation.setParams({isFav: currentCourseIsFavorite});
+    }, [currentCourseIsFavorite]);
+ 
+
     return (
         <ScrollView>
             <Image source={{uri: selectedCourse.imageUrl}} 
@@ -44,17 +66,18 @@ const CourseDetailScreen = props => {
 };
 
 CourseDetailScreen.navigationOptions = (navigationData) => {
-    const courseId = navigationData.navigation.getParam('courseId');
-    const selectedCourse = COURSES.find(course => course.id === courseId);
+    //const courseId = navigationData.navigation.getParam('courseId');
+    const courseTitle = navigationData.navigation.getParam('courseTitle');
+    const toggleFavorite = navigationData.navigation.getParam('toggleFav');
+    const isFavorite = navigationData.navigation.getParam('isFav');
+    //const selectedCourse = COURSES.find(course => course.id === courseId);
     return{
-        headerTitle: selectedCourse.title,
+        headerTitle: courseTitle,
         headerRight: () => (<HeaderButtons 
             HeaderButtonComponent={HeaderButton}> 
                 <Item title='Favorite' 
-                    iconName='ios-star'
-                    onPress={() => {
-                    console.log ('Mark as favorite!');}
-                    }
+                    iconName={isFavorite ? 'ios-star' : 'ios-star-outline'}
+                    onPress={toggleFavorite}
                 />
              </HeaderButtons>
             )

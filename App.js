@@ -3,10 +3,19 @@ import { StyleSheet, Text, View } from 'react-native';
 import * as Font from 'expo-font';
 import { AppLoading } from 'expo';
 import { enableScreens } from 'react-native-screens';
+import { createStore, combineReducers } from 'redux';
+import { Provider } from 'react-redux';
 
 import CourseNavigator from './navigation/CourseNavigator';
+import coursesReducer from './store/reducers/courses';
 
 enableScreens();
+
+const rootReducer = combineReducers({
+    courses: coursesReducer
+});
+
+const store = createStore(rootReducer);
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -25,7 +34,11 @@ export default function App() {
     onError={(err) => console.log(err)}
      />;
   };
-  return <CourseNavigator />;
+  return (
+    <Provider store={store}> 
+        <CourseNavigator />
+    </Provider> 
+  );
 
 }
 

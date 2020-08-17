@@ -1,18 +1,18 @@
 import React from 'react';
 import {View, Text, StyleSheet } from 'react-native';
 import { HeaderButtons, Item } from 'react-navigation-header-buttons';
+import { useSelector } from 'react-redux';
 
 import HeaderButton from '../components/HeaderButton';
 import CourseList from '../components/CourseList';
 import { COURSES } from '../data/model-data';
 
 const FavoritesScreen = props => {
-
-    const favCourse = COURSES.filter(course => course.id === 'm1' || course.id === 'm2')
+    const favCourses = useSelector(state => state.courses.favoriteCourses)
    
     return (
         <CourseList 
-            listData={favCourse}
+            listData={favCourses}
             navigation={props.navigation}
         />
     );

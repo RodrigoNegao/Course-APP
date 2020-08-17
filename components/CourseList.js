@@ -1,11 +1,15 @@
 import React from 'react';
 import { View,FlatList,StyleSheet } from 'react-native';
+import { useSelector } from 'react-redux';
 
 import CourseItem from './CourseItem'; 
 
 const CourseList = props => {
+    const favoriteCourses = useSelector(state => state.courses.favoriteCourses);
 
     const renderCourseItem = itemData => {
+        const isFavorite = favoriteCourses.some(course => course.id === itemData.item.id);
+
         return(
             <CourseItem title={itemData.item.title}
             image={itemData.item.imageUrl}
@@ -13,8 +17,11 @@ const CourseList = props => {
             osystem={itemData.item.osystem}
             opensource={itemData.item.opensource}
             onSelectCourse={() => {
-                props.navigation.navigate('CourseDetail',{
-                    courseId: itemData.item.id
+                props.navigation.navigate(
+                    'CourseDetail',{
+                    courseId: itemData.item.id,
+                    courseTitle: itemData.item.title,
+                    isFav: isFavorite
                 });
             }}/>
         );
