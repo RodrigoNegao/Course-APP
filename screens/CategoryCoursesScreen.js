@@ -1,5 +1,5 @@
 import React from 'react';
-import { View,StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import { CATEGORIES, COURSES } from '../data/model-data';
@@ -18,7 +18,7 @@ const CategoryCoursesScreen = props => {
 
     if (displayedCourses.length === 0){
         return <View style={styles.content}>
-        <DefaultText>Tecnologias não encontrada, cheque seus filtros.</DefaultText>
+            <DefaultText>Tecnologias não encontrada, cheque seus filtros.</DefaultText>
         </View>
     }
 
@@ -44,7 +44,7 @@ CategoryCoursesScreen.navigationOptions = navigationData => {
 };
 
 const styles = StyleSheet.create({
-    content:{
+    content: {
         flex:1,
         justifyContent: 'center',
         alignItems : 'center',

@@ -13,7 +13,9 @@ const FavoritesScreen = props => {
     
     if (favCourses.length === 0 || !favCourses) {
         return <View style={styles.content}>
-            <Text>Não existe Favorito no momento.Então comece a adicionar tocando na Estrela no Canto Superior Direito! </Text>
+            <DefaultText>     Não existe Favorito no momento. Então 
+                comece a adicionar tocando na Estrela no Canto 
+                Superior Direito!</DefaultText>
         </View>
     }
 
@@ -40,10 +42,11 @@ FavoritesScreen.navigationOptions = navData => {
 };
 
 const styles = StyleSheet.create({
-    content:{
+    content: {
         flex:1,
         justifyContent: 'center',
         alignItems : 'center',
+        padding: 50
     },
 });
 
