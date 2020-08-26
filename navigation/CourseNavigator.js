@@ -113,7 +113,7 @@ const MainNavigator = createDrawerNavigator({
     CoursesFavs:{ 
         screen: CourseFavTabNavigator,
         navigationOptions:{
-            drawerLabel: 'CURSOS'
+            drawerLabel: 'TECNOLOGIAS'
         }
     },
     Filters: FilterNavigator

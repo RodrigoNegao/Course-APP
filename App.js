@@ -9,6 +9,7 @@ import { Provider } from 'react-redux';
 import CourseNavigator from './navigation/CourseNavigator';
 import coursesReducer from './store/reducers/courses';
 
+
 enableScreens();
 
 const rootReducer = combineReducers({
@@ -42,18 +43,19 @@ export default function App() {
 
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  fontText:{
-    fontFamily: 'open-sans-bold',
-    fontSize: 20,
-  },
-});
+// const styles = StyleSheet.create({
+//   container: {
+//     flex: 1,
+//     //backgroundColor: Colors.accentColor, // '#fff',
+//     alignItems: 'center',
+//     justifyContent: 'center',
+//   },
+//   fontText:{
+//     fontFamily: 'open-sans-bold',
+//     fontSize: 20,
+//   },
+// });
+
 
   // import 'react-native-gesture-handler';
   // (
