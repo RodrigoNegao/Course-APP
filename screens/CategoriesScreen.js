@@ -7,6 +7,7 @@ import { HeaderButtons, Item } from 'react-navigation-header-buttons';
 import { CATEGORIES } from '../data/model-data';
 import HeaderButton from '../components/HeaderButton';
 import CategotyGridTile from '../components/CategoryGridTile';
+import Colors from '../constants/Colors';
 
 
 const CategoriesScreen = props => {
@@ -23,7 +24,7 @@ const CategoriesScreen = props => {
     };
 
     return (
-            <FlatList data={CATEGORIES} 
+            <FlatList style={styles.screen} data={CATEGORIES} 
             keyExtractor={(item,index) => item.id}
             renderItem={renderGridItem} 
             numColumns={2}
@@ -47,9 +48,10 @@ CategoriesScreen.navigationOptions = navData => {
 
 const styles = StyleSheet.create({
     screen:{
-        flex:1,
-        justifyContent: 'center',
-        alignItems : 'center',
+        // flex:1,
+        // justifyContent: 'center',
+        // alignItems : 'center',
+        backgroundColor: Colors.accentColor , // cor editado
     },
 });
 

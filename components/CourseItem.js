@@ -7,6 +7,7 @@ import { View,
         } from 'react-native';
 
 import DefaultText from '../components/DefaultText';
+//import Colors from '../constants/Colors';
 
 const CourseItem = props => {
     return (

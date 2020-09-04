@@ -3,6 +3,7 @@ import { View,FlatList,StyleSheet } from 'react-native';
 import { useSelector } from 'react-redux';
 
 import CourseItem from './CourseItem'; 
+import Colors from '../constants/Colors';
 
 const CourseList = props => {
     const favoriteCourses = useSelector(state => state.courses.favoriteCourses);
@@ -42,6 +43,7 @@ const styles = StyleSheet.create({
         flex:1,
         justifyContent: 'center',
         alignItems: 'center',
+        backgroundColor: Colors.accentColor, // cor editado
     },
 });
 
