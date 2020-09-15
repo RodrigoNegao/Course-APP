@@ -9,9 +9,9 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/coding.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splash1.png",
       "resizeMode": "contain",
       "backgroundColor": "#017D8B" //#F92672 #63D9F6 #ffffff
     },
@@ -23,6 +23,20 @@
     ],
     "ios": {
       "supportsTablet": true
-    }
+    },
+    //MODEL
+    // "android": {
+    //   "splash": {
+    //     "backgroundColor": "#017D8B" ,
+    //     "resizeMode": "contain",
+    //     "ldpi": "./assets/coding24px.png",
+    //     "mdpi": "./assets/coding24px.png",
+    //     "hdpi": "./assets/coding24px.png",
+    //     "xhdpi": "./assets/coding24px.png",
+    //     "xxhdpi": "./assets/coding24px.png",
+    //     "xxxhdpi": "./assets/coding24px.png",
+    //     "hideExponentText": true
+    //   }
+    // }
   }
 }
