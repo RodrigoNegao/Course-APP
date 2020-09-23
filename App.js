@@ -8,9 +8,11 @@ import { Provider } from 'react-redux';
 
 import CourseNavigator from './navigation/CourseNavigator';
 import coursesReducer from './store/reducers/courses';
+//import SplashScreen from './SplashScreen';
 
 
 enableScreens();
+
 
 const rootReducer = combineReducers({
     courses: coursesReducer
@@ -33,7 +35,7 @@ export default function App() {
     startAsync={fetchFonts} 
     onFinish={() => setDataLoaded(true)}
     onError={(err) => console.log(err)}
-     />;
+    />;
   };
   return (
     <Provider store={store}> 
