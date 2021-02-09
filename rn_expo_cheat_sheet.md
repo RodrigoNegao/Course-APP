@@ -1,4 +1,4 @@
-## Comands Expo/RN Cheat Sheet
+## Commands Expo/RN Cheat Sheet
 
 .../project>
 ```
